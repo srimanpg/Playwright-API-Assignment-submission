@@ -17,7 +17,7 @@ test.describe('ReqRes API Automation Suite', () => {
         const createRes = await request.post(`${BASE_URL}/api/users`, {
             headers,
             data: {
-                name: "Sreeman",
+                name: "Sriman",
                 job: "QA Engineer"
             }
         });
@@ -56,7 +56,7 @@ test.describe('ReqRes API Automation Suite', () => {
         const updateRes = await request.put(`${BASE_URL}/api/users/${userId}`, {
             headers,
             data: {
-                name: "Sreeman Updated",
+                name: "Sriman Updated",
                 job: "Senior QA"
             }
         });
@@ -66,7 +66,7 @@ test.describe('ReqRes API Automation Suite', () => {
         const updateBody = await updateRes.json();
 
         expect(updateBody).toMatchObject({
-            name: "Sreeman Updated",
+            name: "Sriman Updated",
             job: "Senior QA"
         });
 
